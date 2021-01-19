@@ -4,7 +4,8 @@ function Footer() {
     return (
         <footer>
             <div className="container">
-                Test
+                An App created by
+                <a target="_blank" style={{ color: 'grey' }} rel="noopener noreferrer" href="https://github.com/Teknix420"> Travis Gray</a>
             </div>
         </footer>
     )
