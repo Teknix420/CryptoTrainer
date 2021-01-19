@@ -1,0 +1,60 @@
+body, html {
+    height: 100%;
+}
+
+.navBtn {
+    margin-left: 10px;
+}
+
+.homePageHeader {
+    margin-top: 5%;
+}
+
+#loginText {
+    margin-top: 5%;
+}
+
+.homepageBtn {
+    margin-top: 20px;
+}
+
+#loginBtn {
+    margin-right: 5px;
+}
+
+#createBtn {
+    margin-left: 5px;
+}
+
+.tradeBtn {
+    margin-left: 50px;
+}
+
+.welcomeHeader {
+    margin: 20px 50px;
+}
+
+#welcome {
+    margin-bottom: 20px;
+}
+
+.dashboardDiv {
+    margin-bottom: 100px;
+}
+
+body {
+    margin-bottom: 50px;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    height: 50px;
+    line-height: 40px;
+}
