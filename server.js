@@ -5,20 +5,10 @@ const session = require('express-session');
 const PORT = process.env.PORT || 3001;
 const MongoDBStore = require('connect-mongodb-session')(session);
 const app = express();
-
-
-app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
-
-console.log(process.env)
 const store = new MongoDBStore({
     uri: process.env.MONGODB_CRYPTO,
     collection: 'sessiondata'
 })
-
-store.on('error', function (error) {
-    console.log(error);
-});
 
 const sess = {
     secret: 'cryptonite',
@@ -27,6 +17,13 @@ const sess = {
     saveUninitialized: true,
     store: store
 }
+
+store.on('error', function (error) {
+    console.log(error);
+});
+
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
 
 if (process.env.NODE_ENV === "production") {
     app.use(express.static("client/build"));
