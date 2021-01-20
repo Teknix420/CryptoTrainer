@@ -32,7 +32,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(session(sess));
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/cryptotrainer',
+mongoose.connect(process.env.MONGODB_URI,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
