@@ -10,11 +10,6 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
-if (process.env.NODE_ENV === "production") {
-    app.use(express.static("client/build"));
-    app.set('trust proxy', 1)
-    sess.cookie.secure = true
-}
 console.log(process.env)
 const store = new MongoDBStore({
     uri: process.env.MONGODB_CRYPTO,
@@ -33,9 +28,14 @@ const sess = {
     store: store
 }
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+    app.set('trust proxy', 1)
+    sess.cookie.secure = true
+}
+
 app.use(session(sess));
 app.use(routes);
-
 
 mongoose.connect(process.env.MONGODB_CRYPTO || 'mongodb://localhost/cryptotrainer',
     {
