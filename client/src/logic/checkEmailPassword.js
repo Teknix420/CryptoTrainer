@@ -60,7 +60,7 @@ function CheckEmailPassword() {
                                                         .then(res => {
                                                             setTimeout(() => {
                                                                 document.getElementById('createAccountGranted').style.display = 'none';
-                                                                window.location.href = "/dashboard"
+                                                                window.location.href = "/#/dashboard"
                                                             }, 2000);
                                                         })
                                                         .catch(err => console.log(err))

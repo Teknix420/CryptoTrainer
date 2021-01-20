@@ -10,11 +10,11 @@ function Landing() {
         <div>
             <Nav>
                 {/* eslint-disable-next-line */}
-                <a className="nav-link text-white" onClick={() => {
+                <a className="nav-link text-white" href="#" onClick={() => {
                     document.getElementById('loginDiv').style.display = 'block';
                 }}>Login</a>
                 {/* eslint-disable-next-line */}
-                <a className="nav-link text-white" onClick={() => {
+                <a className="nav-link text-white" href="#" onClick={() => {
                     document.getElementById('accountDiv').style.display = 'block';
                 }}>Create Account</a>
             </Nav>

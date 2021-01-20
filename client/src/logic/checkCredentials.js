@@ -38,7 +38,7 @@ function CheckCredentials() {
                             .catch(err => console.log(err))
                         setTimeout(() => {
                             document.getElementById('loginGranted').style.display = 'none';
-                            window.location.href = "/dashboard"
+                            window.location.href = "/#/dashboard"
                         }, 2000);
 
                     }
