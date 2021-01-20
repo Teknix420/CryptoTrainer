@@ -70,11 +70,11 @@ class Dashboard extends Component {
                 <Trade state={this.state} />
                 <Nav>
                     {/* eslint-disable-next-line */}
-                    <a className="nav-link text-white" href="#" onClick={() => {
+                    <a className="nav-link text-white" href="/#/dashboard" onClick={() => {
                         document.getElementById('tradeDiv').style.display = 'block';
                     }}>Trade</a>
                     {/* eslint-disable-next-line */}
-                    <a className="nav-link text-white" href="#" onClick={() => {
+                    <a className="nav-link text-white" href="/#/dashboard" onClick={() => {
                         Logout();
                     }}>Logout</a>
                 </Nav>
