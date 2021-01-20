@@ -6,7 +6,7 @@ const PORT = process.env.PORT || 3001;
 const MongoDBStore = require('connect-mongodb-session')(session);
 const app = express();
 const store = new MongoDBStore({
-    uri: 'mongodb+srv://dbUser:testing420@cluster0.2hijv.mongodb.net/cryptotrainer?retryWrites=true&w=majority',
+    uri: process.env.MONGODB_URI,
     collection: 'sessiondata'
 })
 const sess = {
@@ -33,7 +33,7 @@ if (process.env.NODE_ENV === "production") {
 app.use(session(sess));
 app.use(routes);
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost/cryptotrainer',
+mongoose.connect(process.env.MONGODB_URI,
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
