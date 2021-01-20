@@ -27,7 +27,7 @@ function ExecuteTrade(tradeParams) {
                 document.getElementById('amountTradingFrom').value = '';
                 document.getElementById('tradeDiv').style.display = 'none';
                 window.location.reload();
-            }, 1500)
+            }, 1000)
         })
         .catch(err => console.log(err))
 }

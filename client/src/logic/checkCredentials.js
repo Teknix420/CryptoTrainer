@@ -39,7 +39,7 @@ function CheckCredentials() {
                         setTimeout(() => {
                             document.getElementById('loginGranted').style.display = 'none';
                             window.location.href = "/#/dashboard"
-                        }, 2000);
+                        }, 1000);
 
                     }
                 }

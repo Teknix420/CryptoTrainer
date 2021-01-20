@@ -61,7 +61,7 @@ function CheckEmailPassword() {
                                                             setTimeout(() => {
                                                                 document.getElementById('createAccountGranted').style.display = 'none';
                                                                 window.location.href = "/#/dashboard"
-                                                            }, 2000);
+                                                            }, 1000);
                                                         })
                                                         .catch(err => console.log(err))
                                                 })
