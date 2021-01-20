@@ -6,8 +6,7 @@ const PORT = process.env.PORT || 3001;
 const MongoDBStore = require('connect-mongodb-session')(session);
 const app = express();
 const store = new MongoDBStore({
-    uri: process.env.MONGODB_URI,
-    collection: 'cryptocurrency, user'
+    mongooseConnection: mongoose.connection
 })
 const sess = {
     secret: 'cryptonite',
