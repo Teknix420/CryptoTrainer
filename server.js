@@ -3,13 +3,23 @@ const routes = require('./routes');
 const mongoose = require('mongoose');
 const session = require('express-session');
 const PORT = process.env.PORT || 3001;
+const MongoDBStore = require('connect-mongodb-session')(session);
 const app = express();
+const store = new MongoDBStore({
+    uri: process.env.MONGODB_URI,
+    collection: 'cryptocurrencies, users'
+})
 const sess = {
     secret: 'cryptonite',
     cookie: {},
-    resave: false,
-    saveUninitialized: true
+    resave: true,
+    saveUninitialized: true,
+    store: store
 }
+
+store.on('error', function (error) {
+    console.log(error);
+});
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
