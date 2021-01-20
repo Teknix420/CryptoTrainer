@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BrowserRouter, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import './style.css';
 
@@ -16,12 +16,10 @@ class App extends Component {
         return (
             <div>
                 {/* Routing */}
-                <BrowserRouter>
-                    <Switch>
-                        <Route path='/dashboard' component={Dashboard} />
-                        <Route path='/' component={Landing} />
-                    </Switch>
-                </BrowserRouter>
+                <Switch>
+                    <Route path='/dashboard' component={Dashboard} />
+                    <Route path='/' component={Landing} />
+                </Switch>
                 {/* Footer */}
                 <Footer></Footer>
             </div>
