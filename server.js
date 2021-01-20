@@ -5,7 +5,7 @@ const session = require('express-session');
 const PORT = process.env.PORT || 3001;
 const MongoDBStore = require('connect-mongodb-session')(session);
 const app = express();
-const mongoDB = 'mongodb+srv://dbUser:testing420@cluster0.2hijv.mongodb.net/cryptotrainer?retryWrites=true&w=majority',
+const mongoDB = 'mongodb+srv://dbUser:testing420@cluster0.2hijv.mongodb.net/cryptotrainer?retryWrites=true&w=majority';
 const store = new MongoDBStore({
     uri: mongoDB,
     collection: 'sessiondata'
