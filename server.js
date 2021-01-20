@@ -7,7 +7,7 @@ const MongoDBStore = require('connect-mongodb-session')(session);
 const app = express();
 const store = new MongoDBStore({
     uri: process.env.MONGODB_URI,
-    collection: 'cryptocurrencies, users'
+    collection: 'cryptocurrency, user'
 })
 const sess = {
     secret: 'cryptonite',
