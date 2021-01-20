@@ -45,6 +45,6 @@ const cryptoSchema = new Schema({
     }
 });
 
-const CryptoCurrency = mongoose.model('cryptocurrencies', cryptoSchema);
+const CryptoCurrency = mongoose.model('Cryptocurrency', cryptoSchema);
 
 module.exports = CryptoCurrency;
