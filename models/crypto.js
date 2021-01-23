@@ -39,7 +39,7 @@ const cryptoSchema = new Schema({
         type: Number,
         default: 0
     },
-    USD: {
+    USDT: {
         type: Number,
         default: 10000
     }

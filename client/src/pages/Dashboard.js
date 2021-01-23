@@ -19,7 +19,7 @@ class Dashboard extends Component {
         XMR: 0,
         DOT: 0,
         XLM: 0,
-        USD: 0,
+        USDT: 0,
         totalValue: 0
     };
 
@@ -30,7 +30,7 @@ class Dashboard extends Component {
     async getPortfolio() {
         API.userLogin()
             .then(res => {
-                this.setState({ portfolio: res.data, USD: res.data.USD });
+                this.setState({ portfolio: res.data, USDT: res.data.USDT });
             })
             .then(res => {
                 this.getMarketValue();
@@ -55,7 +55,7 @@ class Dashboard extends Component {
     };
 
     async computeTotalValue() {
-        this.setState({ totalValue: this.state.portfolio.USD });
+        this.setState({ totalValue: this.state.portfolio.USDT });
         const crypto = ['BTC', 'BCH', 'ETH', 'LTC', 'XRP', 'TRX', 'XMR', 'DOT', 'XLM']
         for (let i = 0; i < crypto.length; i++) {
             this.setState({ totalValue: this.state.totalValue + this.state.portfolio[crypto[i]] * this.state[crypto[i]] })
@@ -91,7 +91,7 @@ class Dashboard extends Component {
                             <li className="list-group-item list-group-item-secondary h4">Stellar: {this.state.portfolio.XLM} at ${this.state.XLM.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} per unit</li>
                             <li className="list-group-item list-group-item-dark h4">Monero: {this.state.portfolio.XMR} at ${this.state.XMR.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} per unit</li>
                             <li className="list-group-item list-group-item-secondary h4">Polkadot: {this.state.portfolio.DOT} at ${this.state.DOT.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })} per unit</li>
-                            <li className="list-group-item list-group-item-dark h4">US Dollars: ${this.state.USD.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</li>
+                            <li className="list-group-item list-group-item-dark h4">US Dollar Tether: {this.state.USDT} at $1.00 per unit</li>
                         </ul>
                     </div>
                 </div>

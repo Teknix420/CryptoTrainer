@@ -3,7 +3,6 @@ import ConvertValue from '../../logic/convertValue';
 import ExecuteTrade from '../../logic/executeTrade';
 
 function Trade(props) {
-    const USD = props.state.USD;
     const portfolio = props.state.portfolio;
 
     return (
@@ -28,7 +27,7 @@ function Trade(props) {
                                     <option value="TRX">Tron - TRX {portfolio.TRX}</option>
                                     <option value="DOT">Polkadot - DOT - {portfolio.DOT}</option>
                                     <option value="XMR">Monero - XMR - {portfolio.XMR}</option>
-                                    <option value="USD">US Dollars - USD - {USD.toLocaleString('en-US', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}</option>
+                                    <option value="USDT">US Dollar Tether - USDT - {portfolio.USDT}</option>
                                 </select>
                             </div>
                             <div className="mb-3">
@@ -66,7 +65,7 @@ function Trade(props) {
                                     <option value="TRX">Tron - TRX</option>
                                     <option value="DOT">Polkadot - DOT</option>
                                     <option value="XMR">Monero - XMR</option>
-                                    <option value="USD">US Dollars - USD</option>
+                                    <option value="USDT">US Dollar Tether - USDT</option>
                                 </select>
                             </div>
                         </form>

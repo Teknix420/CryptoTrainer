@@ -13,6 +13,7 @@ function HomePageHeader() {
                 const accountDiv = document.getElementById('accountDiv');
                 accountDiv.style.display = 'block';
             }}>Create Account</button>
+            <p className="note" >When your account is created, you'll start out with 10,000 USDT, which is the equivalent of $10,000 US Dollars.</p>
         </div>
     )
 }
